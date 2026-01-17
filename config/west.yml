@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/efogdev
     - name: nuovotaka
       url-base: https://github.com/nuovotaka
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
 
   projects:
     - name: zmk
@@ -22,6 +24,9 @@ manifest:
       revision: main
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
+      revision: main
+    - name: zmk-rgbled-widget
+      remote: caksoylar
       revision: main
 
   self:
