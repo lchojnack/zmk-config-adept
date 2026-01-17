@@ -4,7 +4,7 @@ config ZMK_POINTING
     default y
 
 config ZMK_KEYBOARD_NAME
-	default "Kai Adept"
+	default "Trackball Adept"
 
 config SPI
     default y
