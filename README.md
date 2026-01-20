@@ -26,11 +26,9 @@ ZMK config for 3-pin modded Ploopy Adept BLE
 
 #### Wiring Photos
 
-![Xiao BLE Wiring](docs/images/xiao-wiring.jpg)
-*Xiao BLE with PMW3610 sensor connections on the right side*
-
-![PMW3610 Assembly](docs/images/pmw3610-assembly.jpg)
-*PMW3610 sensor mounted in trackball assembly*
+| Xiao BLE Connections | PMW3610 Module |
+|----------------------|----------------|
+| ![Xiao BLE Wiring](docs/images/xiao-wiring.jpg)<br>*Xiao BLE with connections on the right side* | ![PMW3610 Assembly](docs/images/pmw3610-assembly.jpg)<br>*PMW3610 sensor mounted in trackball assembly* |
 
 ### Switch Connections
 
