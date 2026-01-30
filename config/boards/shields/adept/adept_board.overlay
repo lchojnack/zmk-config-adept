@@ -1,10 +1,10 @@
+#include <dt-bindings/zmk/matrix_transform.h>
 #include "pmw3610.dtsi"
 #include "adept-layouts.dtsi"
 #include <input/processors.dtsi>
 #include <input/processors/report_rate_limit.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <behaviors/input_gestures_accel.dtsi>
-#include <dt-bindings/zmk/matrix_transform.h>
 
 &pointer_accel { // this needs to be put BEFORE input-listener
     input-type = <INPUT_EV_REL>;
