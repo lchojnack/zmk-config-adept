@@ -13,5 +13,10 @@
 
     combos { compatible = "zmk,combos"; };
 
-    keymap { compatible = "zmk,keymap"; };
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <>;
+        };
+    };
 };
