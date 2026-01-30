@@ -21,10 +21,6 @@
 
 /* More about input processors: https://zmk.dev/docs/keymaps/input-processors#input-processors-overview */
 
-&physical_layout0 {
-    transform = <&matrix_transform>;
-};
-
 / {
     chosen {
         zmk,kscan = &kscan0;
