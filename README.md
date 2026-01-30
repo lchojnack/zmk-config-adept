@@ -1,9 +1,9 @@
 # zmk-config-adept
-ZMK config for 3-pin modded Ploopy Adept BLE
+ZMK configuration for a trackball-only Ploopy Adept BLE
 
 ## Features
 
-- Scroll layer
+
 - Cursor acceleration
 - Optimal report rate (125hz)
 - RGB LED status indicator
