@@ -2,7 +2,7 @@
 ZMK config for 3-pin modded Ploopy Adept BLE
 
 ## Features
-- ZMK Studio support
+
 - Scroll layer
 - Cursor acceleration
 - Optimal report rate (125hz)
