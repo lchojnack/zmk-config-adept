@@ -51,12 +51,5 @@
             <&zip_ble_report_rate_limit 4>, // from badjeff's https://github.com/badjeff/zmk-input-processor-report-rate-limit/blob/main/dts/input/processors/report_rate_limit.dtsi
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>;
 
-        scroll {
-            layers = <1>; // scroll_layer
-            input-processors =
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_scaler 1 16>,
-            <&zip_xy_to_scroll_mapper>;
-        };
     };
 };
