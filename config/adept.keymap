@@ -16,37 +16,10 @@
 
 #define ZMK_BEHAVIORS_OMIT_KT
 
-&sk { quick-release; };
-
-&sl { release-after-ms = <1500>; };
-
-&lt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-};
-
 / {
-    behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
+    behaviors { compatible = "zmk,behaviors"; };
 
     combos { compatible = "zmk,combos"; };
 
-    keymap {
-        compatible = "zmk,keymap";
-
-        mouse_layer {
-            bindings = <
-&kp LC(PAGE_UP)  &mkp MB4  &mkp MB5  &kp LC(PAGE_DOWN)  &mkp MB1  &mkp MB2
-            >;
-        };
-    };
+    keymap { compatible = "zmk,keymap"; };
 };
