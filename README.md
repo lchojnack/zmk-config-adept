@@ -29,16 +29,3 @@ ZMK config for 3-pin modded Ploopy Adept BLE
 | Xiao BLE Connections | PMW3610 Module |
 |----------------------|----------------|
 | ![Xiao BLE Wiring](docs/images/xiao-wiring.jpg)<br>*Xiao BLE with connections on the right side* | ![PMW3610 Assembly](docs/images/pmw3610-assembly.jpg)<br>*PMW3610 sensor mounted in trackball assembly* |
-
-### Switch Connections
-
-| Switch | Xiao BLE Pin | nRF52840 Pin | Description |
-|--------|--------------|--------------|-------------|
-| sw_1 | D2 | P0.03 | Switch to GND |
-| sw_2 | A2 | P0.28 | Switch to GND |
-| sw_3 | A3 | P0.29 | Switch to GND |
-| sw_4 | D3 | P0.04 | Switch to GND |
-| sw_5 | D4 | P0.05 | Switch to GND |
-| sw_6 | TX | P1.11 | Switch to GND |
-
-All switches use internal pull-up resistors and are active low (close to GND when pressed).
