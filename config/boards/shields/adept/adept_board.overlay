@@ -43,3 +43,8 @@
 
     };
 };
+
+/* Disable UART to avoid pin conflicts */
+&uart0 {
+    status = "disabled";
+};
