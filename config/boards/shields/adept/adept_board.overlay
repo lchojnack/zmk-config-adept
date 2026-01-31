@@ -55,7 +55,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        // xy-swap;                      // Maintain XY swapping without processor
+        xy-swap;                      // Maintain XY swapping without processor
 
         // Performance mode: force-high-performance
         // Note: force-awake can cause cursor warping/jumping - not recommended
