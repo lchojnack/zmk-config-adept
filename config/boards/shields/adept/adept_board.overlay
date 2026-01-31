@@ -7,10 +7,10 @@
 // Includes and Definitions
 // ----------------------------------------------------------------------------
 
-#include <input/processors.dtsi>
-#include <input/processors/report_rate_limit.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
-#include <behaviors/input_gestures_accel.dtsi>
+// #include <input/processors.dtsi>
+// #include <input/processors/report_rate_limit.dtsi>
+// #include <dt-bindings/zmk/input_transform.h>
+// #include <behaviors/input_gestures_accel.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 // ----------------------------------------------------------------------------
@@ -55,6 +55,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+        swap-xy;                      // Maintain XY swapping without processor
 
         // Performance mode: force-high-performance
         // Note: force-awake can cause cursor warping/jumping - not recommended
@@ -66,27 +67,27 @@
 // Pointer Acceleration Configuration
 // ----------------------------------------------------------------------------
 
-&pointer_accel {
-    // This processor must be defined BEFORE the input-listener
-    input-type = <INPUT_EV_REL>;
-    codes = <INPUT_REL_X INPUT_REL_Y>;
-    
-    // Sensitivity and Acceleration Settings
-    sensitivity = <800>;              // 0.8x base sensitivity
-	min-factor = <800>;		  // 0.8x minimum for percision
-    max-factor = <3000>;             // 3.0x maximum acceleration
-    acceleration-exponent = <1>;     // Advanced exponential curve (1-5)
-    
-    // Axis-Specific Settings
-    y-boost = <1000>;                // 1.0x Y-axis boost for widescreen monitors
-    
-    // Speed-Based Acceleration
-    speed-threshold = <900>;         // Start acceleration at 900 counts/sec (~1.5 inch/sec)
-    speed-max = <1800>;              // Max acceleration at 1800 counts/sec (~3 inch/sec)
-    
-    // Sensor Characteristics
-    sensor-dpi = <600>;              // Match sensor CPI setting
-};
+// &pointer_accel {
+//     // This processor must be defined BEFORE the input-listener
+//     input-type = <INPUT_EV_REL>;
+//     codes = <INPUT_REL_X INPUT_REL_Y>;
+//     
+//     // Sensitivity and Acceleration Settings
+//     sensitivity = <800>;              // 0.8x base sensitivity
+// 	min-factor = <800>;		  // 0.8x minimum for percision
+//     max-factor = <3000>;             // 3.0x maximum acceleration
+//     acceleration-exponent = <1>;     // Advanced exponential curve (1-5)
+//     
+//     // Axis-Specific Settings
+//     y-boost = <1000>;                // 1.0x Y-axis boost for widescreen monitors
+//     
+//     // Speed-Based Acceleration
+//     speed-threshold = <900>;         // Start acceleration at 900 counts/sec (~1.5 inch/sec)
+//     speed-max = <1800>;              // Max acceleration at 1800 counts/sec (~3 inch/sec)
+//     
+//     // Sensor Characteristics
+//     sensor-dpi = <600>;              // Match sensor CPI setting
+// };
 
 // ----------------------------------------------------------------------------
 // Input System Configuration
@@ -112,10 +113,10 @@
         device = <&trackball>;
         
         // Input Processing Pipeline
-        input-processors =
-            <&pointer_accel>,                          // Apply pointer acceleration
-            <&zip_ble_report_rate_limit 4>,           // Limit report rate to 4ms (250Hz)
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>; // Swap X and Y axes
+        // input-processors =
+        //     <&pointer_accel>,                          // Apply pointer acceleration
+        //     <&zip_ble_report_rate_limit 4>,           // Limit report rate to 4ms (250Hz)
+        //     <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>; // Swap X and Y axes
     };
 };
 
