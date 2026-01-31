@@ -97,6 +97,7 @@
     chosen {
         // Mock keyboard scanner (no physical keys)
         zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
     };
 
     // Mock Keyboard Scanner Configuration
@@ -105,6 +106,13 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+
+    default_transform: matrix_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <1>;
+        rows = <1>;
+        map = <RC(0,0)>;
     };
 
     // Trackball Input Listener
